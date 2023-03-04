@@ -1,0 +1,45 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Universal Reborn</title>
+    <link rel="stylesheet" href="css/galaxy.css" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <div class="cursor"><div class="planet"></div></div>
+    <div class="container">
+      <div class="mainhead">
+        <div class="title"><h1>Universal Reborn</h1></div>
+        <div class="desc">Remake of Universal UB</div>
+        <form id="uv-form" class="flex-center">
+          <input
+            id="uv-search-engine"
+            value="https://www.google.com/search?q=%s"
+            type="hidden"
+          />
+          <input id="uv-address" type="text" class="galaxy-input" />
+        </form>
+
+      
+               
+        <button class="game-btn">🎮 Games</button>
+    </div>
+    <canvas id="canvas" height="100%" width="100%"></canvas>
+    <script src="js/galaxy.js"></script>
+    <script src="js/cursor.js"></script>
+
+    <!-- Ultra-violet inclusion -->
+    <script src="uv/uv.bundle.js" defer></script>
+    <script src="uv/uv.config.js" defer></script>
+    <script src="register-sw.js" defer></script>
+    <script src="search.js" defer></script>
+    <script src="index.js" defer></script>
+    <script>
+      document.querySelector(".game-btn").addEventListener("click", () => {
+        window.open("games", "_blank");
+      });
+    </script>
+  </body>
+</html>
